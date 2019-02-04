@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ProjetoSantana.Models.SuporteAts>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Atendimentos Ats</h2>
+
+<p>
+    @Html.ActionLink("Novo Atendimento", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.DescProblema)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.CodAtendimento)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td align="justify" style="vertical-align:middle" width="800">
+                @Html.DisplayFor(modelItem => item.DescProblema)
+            </td>
+            <td style="vertical-align:middle" align="center">
+                @Html.DisplayFor(modelItem => item.CodAtendimento)
+            </td>
+            <td style="vertical-align:middle" align="center">
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <button type="button" class="btn btn btn-primary btn-xs" onclick="location.href='@Url.Action("Edit","SuporteAts", new { id = item.Codigo })'"><span class="glyphicon glyphicon-pencil"></span></button>
+                <button type="button" class="btn btn-primary btn-xs" onclick="location.href='@Url.Action("Details","SuporteAts", new { id = item.Codigo })'"><span class="glyphicon glyphicon-eye-open"></span></button>
+            </td>
+
+        </tr>
+    }
+</table>

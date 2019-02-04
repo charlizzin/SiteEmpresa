@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoSantana", "ProjetoSantana\ProjetoSantana.csproj", "{5FB7783C-1EF4-421E-8258-9CA636AF042C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{60FEB1DB-9335-437E-9D4B-464D24A3441C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FB7783C-1EF4-421E-8258-9CA636AF042C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB7783C-1EF4-421E-8258-9CA636AF042C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB7783C-1EF4-421E-8258-9CA636AF042C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB7783C-1EF4-421E-8258-9CA636AF042C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FEB1DB-9335-437E-9D4B-464D24A3441C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FEB1DB-9335-437E-9D4B-464D24A3441C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FEB1DB-9335-437E-9D4B-464D24A3441C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FEB1DB-9335-437E-9D4B-464D24A3441C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {341C9E7E-1349-4D98-9F71-2D5324BF1B40}
+	EndGlobalSection
+EndGlobal

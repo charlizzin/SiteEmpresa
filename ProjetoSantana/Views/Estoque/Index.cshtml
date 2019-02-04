@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ProjetoSantana.Models.Estoque.Estoque>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Posicao de Estoque</h2>
+
+
+
+<div>
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CODIGO)
+                </th>
+                <th style="text-align:left">
+                    @Html.DisplayNameFor(model => model.DESCRICAO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MATRIZ)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VILAISA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CIMENTO)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEDIS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DIFERENCA)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CODIGO)
+                    </td>
+                    <td style="text-align:left" width="80">
+                        @Html.DisplayFor(modelItem => item.DESCRICAO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MATRIZ)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VILAISA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CIMENTO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CEDIS)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DIFERENCA)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    td {
+        text-align: center
+    }
+
+    th {
+        text-align: center
+    }
+</style>
+

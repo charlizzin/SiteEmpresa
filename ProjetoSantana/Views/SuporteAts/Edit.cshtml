@@ -1,0 +1,85 @@
+﻿@model ProjetoSantana.Models.SuporteAts
+
+@{
+    ViewBag.Title = "Alterar";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Suporte Ats</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => Model.Codigo)
+    <div class="form-group">
+        <label>Data</label>
+        @Html.EditorFor(model => model.DataInicio, new { htmlAttributes = new { @class = "form-control", @Readonly = "readonly" } })
+        @Html.ValidationMessageFor(model => model.DataInicio, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Descricao Problema</label>
+        @Html.TextAreaFor(model => model.DescProblema, 10, 60, new { @class = "form-control hint" })
+        @Html.ValidationMessageFor(model => model.DescProblema, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Empresa</label>
+        @Html.EditorFor(model => model.Empresa, new { htmlAttributes = new { @class = "form-control", @Readonly = "readonly" } })
+        @Html.ValidationMessageFor(model => model.Empresa, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Solicitantes</label>
+        @Html.EditorFor(model => model.Solicitante, new { htmlAttributes = new { @class = "form-control", @Readonly = "readonly" } })
+        @Html.ValidationMessageFor(model => model.Solicitante, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Atendente</label>
+        @Html.EditorFor(model => model.Atendente, new { htmlAttributes = new { @class = "form-control", @Readonly = "readonly" } })
+        @Html.ValidationMessageFor(model => model.Atendente, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Codigo Atendimento</label>
+        @Html.EditorFor(model => model.CodAtendimento, new { htmlAttributes = new { @class = "form-control", @Readonly = "readonly" } })
+        @Html.ValidationMessageFor(model => model.CodAtendimento, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Codigo Chamado</label>
+        @Html.EditorFor(model => model.CodChamado, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.CodChamado, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Solucao Problema</label>
+        @Html.TextAreaFor(model => model.Solucao, 10, 60, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Solucao, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+        @Html.DropDownListFor(model => model.Status, (IEnumerable<SelectListItem>)ViewBag.Status, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group col-md-12">
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+            <button type="button" value="cancelar" class="btn btn-danger" onClick="location.href='@Url.Action("Index", "SuporteAts")'">Cancelar</button>
+        </div>
+    </div>
+    <br />
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
